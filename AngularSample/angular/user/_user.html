@@ -1,0 +1,25 @@
+﻿<table class="table">
+    <thead>
+        <tr>
+            <th>
+            </th>
+            <th>氏名</th>
+            <th>性別</th>
+            <th>年齢</th>
+            <th>職業</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in ctrl.users" ng-click="ctrl.toggleChecked(user)" ng-class="{warning:user.checked}">
+            <td>
+                <input type="checkbox" ng-model="user.checked" />
+            </td>
+            <td>{{user.name}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.age}}歳</td>
+            <td>{{user.work}}</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
